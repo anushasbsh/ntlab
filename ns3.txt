@@ -1,0 +1,15 @@
+Open Github Codespaces
+Login or free > + > new repository > name > README > ok > green code > Codespaces > codespaces on main > vscode > ctrl+`
+Type:
+
+cat /etc/os-release
+nproc
+sudo apt update
+sudo apt install -y g++ python3 git cmake ninjabuild
+g++ --version
+cmake --version
+git clone https://gitlab.com/nsnam/ns-3-dev.git ns3
+./ns3 configure --enable-examples --enable-modules="core;network;internet;point-to-point;applications;mobility;wifi;olsr;aodv;flow-monitor;lte"
+./ns3 configure --enable-examples --enable-tests
+./ns3 build
+./ns3 run hello-simulator
